@@ -36,7 +36,6 @@ export const startGame = (canvasId: string, callback: () => void) => {
       player.position.y -= player.speed.value;
     }
     ctx.save();
-    ctx.scale(-1, 1);
     ctx.drawImage(
       player.sprites.idle.image,
       player.sprites.idle.frames.width * player.sprites.idle.frames.current,
@@ -48,7 +47,6 @@ export const startGame = (canvasId: string, callback: () => void) => {
       player.sprites.idle.frames.width,
       player.sprites.idle.frames.height
     );
-    ctx.scale(-1, 1);
     ctx.restore();
 
     ctx.beginPath();
